@@ -1,48 +1,56 @@
 .App {
-  text-align: center; }
+  text-align: center;
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 80px; }
+  height: 80px;
+}
 
 .App-header {
   background-color: #222;
   height: 150px;
   padding: 20px;
-  color: white; }
+  color: white;
+}
 
 .App-title {
-  font-size: 1.5em; }
+  font-size: 1.5em;
+}
 
 .App-intro {
-  font-size: large; }
+  font-size: large;
+}
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
 
 /* button stuff */
+$brand: tomato;
 button {
   font-size: 40px;
   padding: 1em;
   border: 0;
-  background: tomato;
+  background: $brand;
   color: white;
   line-height: 1.4;
   border-radius: 50%;
   height: 6em;
   width: 6em;
-  box-shadow: 0 0.2em 0 #ff3814;
+  box-shadow: 0 .2em 0 darken($brand,10%);
   position: relative;
   top: 0;
   transition: all .1s ease-in-out;
   outline: none;
-  font-weight: bold; }
-  button:hover {
+  font-weight: bold;
+  &:hover {
     top: -.1em;
-    box-shadow: 0 0.3em 0 #ff3814; }
-  button:active {
+    box-shadow: 0 .3em 0 darken($brand,10%);
+  }
+  &:active {
     top: .2em;
-    box-shadow: 0 0.1em 0 #ff3814; }
+    box-shadow: 0 .1em 0 darken($brand,10%);
+  }
+}

@@ -3,6 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
+  handleClick() {
+      alert("hi");
+  }
   render() {
     return (
       <div className="App">
@@ -13,6 +16,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <button onClick={this.handleClick}>click me! </button>
       </div>
     );
   }
